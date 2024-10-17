@@ -1,4 +1,4 @@
-const API_KEY = "ef82a68b654e4a258bfddeddaf4a00c5"
+const API_KEY = "ef82a68b654e4a258bfddeddaf4a00c5";
 
 const recipeListEl = document.getElementById("recipe-list");
 
@@ -13,16 +13,16 @@ function displayRecipes(recipes){
         recipeImageEl.alt = "recipe image";
 
     
-        recipeTitleEl = document.createElement("h2")
+        recipeTitleEl = document.createElement("h2");
         recipeTitleEl.innerText = recipe.title;
 
         recipeIngredientsEl = document.createElement("p");
 
-        recipeIngredientsEl.innerHTML = `<strong>Ingredients:</strong> ${recipe.extendedIngredients.map((ingredient) => ingredient.original).join(", ")}`;
+        recipeIngredientsEl.innerHTML = ` <strong>Ingredients:</strong> ${recipe.extendedIngredients.map((ingredient) => ingredient.original).join(", ")}`;
 
-        recipelinkEl = document.createElement("a");
-        recipelinkEl.href = recipe.sourceUrl;
-        recipelinkEl.innerText = "View Recipe";
+        recipeLinkEl = document.createElement("a");
+        recipeLinkEl.href = recipe.sourceUrl;
+        recipeLinkEl.innerText = "View Recipe";
 
         
         recipeItemEl.appendChild(recipeImageEl);
